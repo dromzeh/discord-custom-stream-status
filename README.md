@@ -17,7 +17,7 @@ python3 -m pip install -U discord.py
 py -3 -m pip install -U discord.py
 ```
 
-instructions are all in `run.py`, **you only need to download run.py** + don't need to clone this repo.
+explanations are all in `run.py` - you can download the program through [releases page](https://github.com/dromzeh/discord-custom-stream-status/releases/tag/v1)
 once you have edited run.py, go into cmd prompt in that directory and write `py run.py`
 
 **DISCLAIMER: I am not responsible if your account gets banned due to using this program, like stated, use at your OWN risk.**
