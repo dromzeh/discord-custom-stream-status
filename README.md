@@ -18,7 +18,7 @@ py -3 -m pip install -U discord.py
 ```
 
 instructions are all in `run.py`, **you only need to download run.py** + don't need to clone this repo.
-once you have edited run.py with the information, go into cmd prompt in that directory and write `py run.py`
+once you have edited run.py, go into cmd prompt in that directory and write `py run.py`
 
 **DISCLAIMER: I am not responsible if your account gets banned due to using this program, like stated, use at your OWN risk.**
 
