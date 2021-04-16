@@ -1,12 +1,12 @@
 
 # discord custom stream status
-[![python](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/) [![python](https://img.shields.io/badge/discord.py-latest-ff69b4.svg)](https://github.com/Rapptz/discord.py)
+[![python](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/) [![dpy](https://img.shields.io/badge/discord.py-latest-ff69b4.svg)](https://github.com/Rapptz/discord.py) [![version](https://img.shields.io/badge/release-v1.0-informational)](https://github.com/dromzeh/discord-custom-stream-status/)
 
 discord custom stream status w/ discord.py.
 
 **WARNING:** using this could get your discord account banned, as it is classed as **self-botting** which is against Discord's TOS - please use at your own risk, or use on an alt account for precaution.
 
-if you arent aware.. you need [python 3.8+](https://www.python.org/), if you don't know how to install that then i wouldn't even run this program
+any python version that discord.py supports is reccomended, idealy 3.8+ if you don't know how to install python then i wouldn't even run this program
 
 the only python package you need is discord py:
 ```sh
