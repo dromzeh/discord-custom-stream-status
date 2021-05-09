@@ -20,9 +20,8 @@ async def on_ready():
 
 @bot.command()
 async def stop(ctx): # stops the streaming status and closes down
-    if bot.user.id == ctx.message.author.id: # makes it so only you are able to shut down the bot
-        print("bot shutdown requested")
-        await bot.close()
-        time.sleep(3)
+    print("bot shutdown requested")
+    await bot.close()
+    time.sleep(3)
 
 bot.run('TOKEN', bot = False) # enter your token where it says TOKEN
