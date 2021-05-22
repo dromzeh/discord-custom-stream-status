@@ -9,9 +9,7 @@
 
 **WARNING:** using this could get your discord account banned, as it is classed as **self-botting** which is against Discord's TOS - please use at your own risk, or use on an alt account for precaution.
 
-any python version that discord.py supports is required, idealy 3.8+ if you don't know how to install python then i wouldn't even run this program
-
-the only python package you need is discord py:
+install discord.py:
 ```sh
 # Linux/macOS
 python3 -m pip install -U discord.py
