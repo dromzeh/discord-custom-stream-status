@@ -26,3 +26,6 @@ once you have edited run.py, go into cmd prompt in that directory and write `py 
 **DISCLAIMER: I am not responsible if your account gets banned due to using this program, like stated, use at your OWN risk.**
 
 also, to the script kiddies, this isn't a token grabber, it needs your token to run.. how else is it supposed to log in your account without a token lol
+
+
+license under mit: https://dromzeh.mit-license.org/
