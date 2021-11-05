@@ -4,26 +4,14 @@
 <img src="https://img.shields.io/github/last-commit/dromzeh/roblox-filter-for-discord" alt="checks">
 <img src="https://img.shields.io/badge/python-3.8%2B-informational" alt="python">
 <img src="https://img.shields.io/badge/discord.py-latest-blueviolet" alt="dpy">
-<img src="https://img.shields.io/badge/release-v1.0-informational" alt="release">
+<img src="https://img.shields.io/badge/release-v1.1-informational" alt="release">
 </p> 
 
-**WARNING:** using this could get your discord account banned, as it is classed as **self-botting** which is against Discord's TOS - please use at your own risk, or use on an alt account for precaution.
+**DISCLAIMER: I am not responsible if your account gets banned due to using this program, like stated, use this at your OWN risk.** https://support.discord.com/hc/en-us/articles/115002192352-Automated-user-accounts-self-bots-
 
-install discord.py:
-```sh
-# Linux/macOS
-python3 -m pip install -U discord.py
+setup is straight forward - install requirements in `requirements.txt` if you haven't already, edit `config.json` with your discord token, etc & run the program.
+**(streamurl can only support twitch.tv and youtube.com links)**
 
-# Windows
-py -3 -m pip install -U discord.py
-```
+*also, to the script kiddies, this isn't a token grabber, it needs your token to run.. how else is it supposed to log in your account without a token lol*
 
-explanations are all in `run.py` - you can download the program through [releases page](https://github.com/dromzeh/discord-custom-stream-status/releases/tag/v1)
-once you have edited run.py, go into cmd prompt in that directory and write `py run.py`
-
-**DISCLAIMER: I am not responsible if your account gets banned due to using this program, like stated, use at your OWN risk.**
-
-also, to the script kiddies, this isn't a token grabber, it needs your token to run.. how else is it supposed to log in your account without a token lol
-
-
-*license under mit: https://dromzeh.mit-license.org/*
+*licensed under mit: https://mit.dromzeh.dev/*

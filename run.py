@@ -1,27 +1,42 @@
-# importing required packages
-import time
-import discord
-import asyncio
-from discord.ext import commands
+# importing required modules
+try:
+    import time
+    import discord
+    import asyncio
+    from discord.ext import commands
+    import json
+    from colorama import init, Fore, Back, Style
+except ModuleNotFoundError:
+    print('You are missing the required module(s) to run this program.\n Please install them from requirements.txt and try running the program again.')
 
-# customize settings
-prefix = '!!' # edit the bot prefix for the command
-streamname = "dromzeh.best" # set the name of your stream (for example,, will appear as "Streaming dromzeh.best")
-streamurl = "https://www.youtube.com/watch?v=dQw4w9WgXcQ" # set the url that the "watch" button redirects to, has to be twitch or youtube only
+init(autoreset=True) # allowing colorama to properly display on windows
 
-# do not modify / edit the rest of this if you have little to no python / discord.py knowledge
+# loading config
+with open("config.json") as data:
+    config = json.load(data)
+
+token = config["token"]
+prefix = config["prefix"]
+streamurl = config["streamurl"]
+streamname = config["streamname"]
+
 bot = commands.Bot(command_prefix=prefix, self_bot=True)
 
-@bot.event  
+@bot.event
 async def on_ready():
-    print(f"logged in as {bot.user.id} / {bot.user.name}")
-    await bot.change_presence(activity=discord.Streaming(name=streamname, url=streamurl)) # sets presence to streaming
-    print("streaming status enabled, may take some time to show up on your profile.")
+    print(f"{Fore.YELLOW}[!] Running Discord Custom Stream Status - https://github.com/dromzeh/discord-custom-stream-status")
+    print(f"{Fore.YELLOW}[!] Licensed under MIT - Read https://mit.dromzeh.dev/ for more information")
+    print(f"{Fore.GREEN}[+] Logged in as [{bot.user.id}] {bot.user.name}")
+    try:
+        await bot.change_presence(activity=discord.Streaming(name=streamname, url=streamurl))
+        print(f'{Fore.GREEN}[+] Streaming status enabled: \nStream Name: {streamname} \nStream Url: {streamurl}')
+    except Exception as e:
+        print(f'{Fore.RED}[-] Failed to start streaming status - {e}')
 
 @bot.command()
-async def stop(ctx): # stops the streaming status and closes down
-    print("bot shutdown requested")
+async def stop(ctx):
+    print(f"{Fore.RED}[-] Bot shutdown requested")
     await bot.close()
     time.sleep(3)
 
-bot.run('TOKEN', bot = False) # enter your token where it says TOKEN
+bot.run(token, bot = False)
