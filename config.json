@@ -1,6 +1,6 @@
 {
   "token": "enter token here",
-  "streamurl": "enter stream url here (either youtube.com or twitch.tv)",
-  "streamname": "Enter stream name here",
+  "streamurl": "enter stream url here (youtube.com or twitch.tv only)",
+  "streamname": "enter stream name here",
   "prefix": "!!"
 }

@@ -25,17 +25,17 @@ bot = commands.Bot(command_prefix=prefix, self_bot=True)
 @bot.event
 async def on_ready():
     print(f"{Fore.YELLOW}[!] Running Discord Custom Stream Status - https://github.com/dromzeh/discord-custom-stream-status")
-    print(f"{Fore.YELLOW}[!] Licensed under MIT - Read https://mit.dromzeh.dev/ for more information")
-    print(f"{Fore.GREEN}[+] Logged in as [{bot.user.id}] {bot.user.name}")
+    print(f"\n{Fore.YELLOW}[!] Licensed under MIT - Read https://mit.dromzeh.dev/ for more information")
+    print(f"\n{Fore.GREEN}[+] Logged in as [{bot.user.id}] {bot.user.name}")
     try:
         await bot.change_presence(activity=discord.Streaming(name=streamname, url=streamurl))
-        print(f'{Fore.GREEN}[+] Streaming status enabled: \nStream Name: {streamname} \nStream Url: {streamurl}')
+        print(f'\n{Fore.GREEN}[+] Streaming status enabled: \nStream Name: {streamname} \nStream Url: {streamurl}')
     except Exception as e:
-        print(f'{Fore.RED}[-] Failed to start streaming status - {e}')
+        print(f'\n{Fore.RED}[-] Failed to start streaming status - {e}')
 
 @bot.command()
 async def stop(ctx):
-    print(f"{Fore.RED}[-] Bot shutdown requested")
+    print(f"\n{Fore.RED}[-] Bot shutdown requested, shutting down...")
     await bot.close()
     time.sleep(3)
 
